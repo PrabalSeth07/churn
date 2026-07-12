@@ -1,4 +1,19 @@
 # Byte-compiled / optimized / DLL files
+# Streamlit
+.streamlit/secrets.toml
+
+# Virtual environment
+newenv/
+
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+build/
+dist/
+
+# VS Code
+.vscode/
 __pycache__/
 *.py[codz]
 *$py.class
