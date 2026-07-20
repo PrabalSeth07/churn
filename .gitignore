@@ -3,6 +3,7 @@
 .streamlit/secrets.toml
 
 # Virtual environment
+artifacts/
 newenv/
 
 # Python
