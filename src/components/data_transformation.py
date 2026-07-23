@@ -106,6 +106,16 @@ class DataTransformation:
 
             target_feature_test_df = test_df[target_column_name]
 
+            target_feature_train_df = target_feature_train_df.map({
+                "No": 0,
+                "Yes": 1
+            })
+
+            target_feature_test_df = target_feature_test_df.map({
+                "No": 0,
+                "Yes": 1
+            })
+
             logging.info(
                 "Applying preprocessing object on training and testing datasets."
             )
