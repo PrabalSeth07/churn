@@ -4,6 +4,8 @@ import pandas as pd
 
 from src.components.data_transformation import DataTransformation
 
+from src.components.model_trainer import ModelTrainer
+
 from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
 
@@ -72,3 +74,12 @@ if __name__ == "__main__":
             test_data
         )
     )
+    modeltrainer = ModelTrainer()
+    result = modeltrainer.initiate_model_trainer(train_arr, test_arr)
+
+    print("\nBest Model:", result["best_model"])
+    print(f"Accuracy : {result['accuracy']:.4f}")
+    print(f"Precision: {result['precision']:.4f}")
+    print(f"Recall   : {result['recall']:.4f}")
+    print(f"F1 Score : {result['f1']:.4f}")
+    print(f"ROC-AUC  : {result['roc_auc']:.4f}")
